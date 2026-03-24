@@ -1,0 +1,37 @@
+# Virtual Environment
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Environment variables
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Model artifacts (optional - keep if you want to upload them)
+# Uncomment if needed
+# *.pkl
+
+# Node (if you later use frontend frameworks)
+node_modules/
+dist/
+build/
+
+# Vite build output
+Frontend/dist/

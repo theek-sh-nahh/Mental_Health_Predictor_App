@@ -1,0 +1,176 @@
+.form-wrapper {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  animation: fadeUp 0.4s ease both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.progress-bar-track {
+  height: 4px;
+  background: var(--border);
+}
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), #8db88f);
+  transition: width 0.45s cubic-bezier(0.4,0,0.2,1);
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1.75rem;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-weight: 600;
+}
+.ready-badge { color: var(--accent); }
+
+.form {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  animation: fadeUp 0.35s ease both;
+}
+
+.field-label {
+  display: flex;
+  align-items: baseline;
+  gap: 0.65rem;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  transition: color var(--transition);
+}
+.field--filled .field-label { color: var(--text-primary); }
+
+.field-number {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--border-dark);
+  flex-shrink: 0;
+}
+.field--filled .field-number { color: var(--accent); }
+
+.field-input {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0.65rem 1rem;
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  width: 140px;
+  -moz-appearance: textfield;
+}
+.field-input::-webkit-outer-spin-button,
+.field-input::-webkit-inner-spin-button { -webkit-appearance: none; }
+.field-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-light);
+}
+.field-input::placeholder { color: var(--border-dark); }
+
+.select-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.option-btn {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  color: var(--text-body);
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.83rem;
+  font-weight: 400;
+  padding: 0.42rem 1rem;
+  transition: all var(--transition);
+}
+.option-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent-dark);
+  background: var(--accent-light);
+}
+.option-btn--selected {
+  background: var(--accent-light);
+  border-color: var(--accent);
+  color: var(--accent-dark);
+  font-weight: 600;
+}
+
+.error-box {
+  background: #fdf0ee;
+  border: 1px solid #e8c4bc;
+  border-radius: var(--radius);
+  color: #a0483c;
+  font-size: 0.85rem;
+  padding: 0.8rem 1rem;
+  display: flex;
+  gap: 0.6rem;
+  line-height: 1.5;
+}
+
+.submit-btn {
+  align-items: center;
+  background: var(--accent);
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 0.25rem;
+  padding: 0.9rem 1.5rem;
+  transition: all var(--transition);
+  box-shadow: 0 4px 18px rgba(107,143,110,0.3);
+}
+.submit-btn:hover:not(:disabled) {
+  background: var(--accent-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 24px rgba(107,143,110,0.4);
+}
+.submit-btn:disabled {
+  background: var(--border);
+  color: var(--text-muted);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+.btn-arrow { font-size: 1rem; transition: transform var(--transition); }
+.submit-btn:hover:not(:disabled) .btn-arrow { transform: translateX(3px); }
+
+.spinner {
+  display: inline-block;
+  width: 14px; height: 14px;
+  border: 2px solid rgba(255,255,255,0.35);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }

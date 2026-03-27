@@ -169,4 +169,4 @@ Solace is an informational tool built for portfolio and educational purposes. It
 
 ## 📄 License
 
-This project is created for academic and portfolio purposes.
+MIT License — feel free to use, modify, and distribute.
